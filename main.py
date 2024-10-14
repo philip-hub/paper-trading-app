@@ -17,23 +17,26 @@ def get_api_key():
         print("Error: 'api_key.txt' file not found. Please create the file and add your Polygon.io API key.")
         return None
 
-def main():
-    api_key = get_api_key()
-    if api_key is None:
-        return  # Exit if the API key could not be read
+
+get_stock_price("NVDA", get_api_key)
+
+# def main():
+#     api_key = get_api_key()
+#     if api_key is None:
+#         return  # Exit if the API key could not be read
     
-    while True:
-        print("1. Buy Stock")
-        print("2. Sell Stock")
-        print("3. Display Gains")
-        print("4. Exit")
+#     while True:
+#         print("1. Buy Stock")
+#         print("2. Sell Stock")
+#         print("3. Display Gains")
+#         print("4. Exit")
         
-        choice = input("Choose an option: ")
-        if choice == "1":
-            ticker = input("Enter stock ticker: ")
-            amount = int(input("Enter amount: "))
-            buy_stock(ticker, amount, api_key)
-        elif choice == "2":
-            ticker = input("Enter stock ticker: ")
-            amount = int(input("Enter amount: "))
+#         choice = input("Choose an option: ")
+#         if choice == "1":
+#             ticker = input("Enter stock ticker: ")
+#             amount = int(input("Enter amount: "))
+#             buy_stock(ticker, amount, api_key)
+#         elif choice == "2":
+#             ticker = input("Enter stock ticker: ")
+#             amount = int(input("Enter amount: "))
            
