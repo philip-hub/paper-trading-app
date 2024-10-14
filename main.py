@@ -37,7 +37,7 @@ def get_stock_price(ticker, api_key,date):
 
 # Call the API key function to get the actual API key
 api_key = get_api_key()
-dat = "2024-10-08"
+date = "2024-10-08"
 # Now pass the API key string to get_stock_price
 if api_key:
     print(get_stock_price("NVDA", api_key,date))
